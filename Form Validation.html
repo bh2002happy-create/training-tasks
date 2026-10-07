@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<style>
+    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #6C63FF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #554bdf;
+}
+.error {
+    color: red;
+    font-size: 13px;
+    text-align: left;
+    margin-top: -15px;
+}
+
+</style>
+<body>
+    <div class="form-container">
+         <h1>Registration Form</h1>
+
+    <form id="myForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email</label>
+        <input type="email" id="email">
+        <br><br>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        
+$(document).ready(function() {
+
+    $("#myForm").submit(function(event) {
+
+        event.preventDefault();
+
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let password = $("#password").val();
+
+        $(".error").remove();
+
+        if (name === "") {
+            $("#name").after("<p class='error'>Please enter your name</p>");
+        }
+
+        if (email === "") {
+            $("#email").after("<p class='error'>Please enter your email</p>");
+        }
+
+        if (password === "") {
+            $("#password").after("<p class='error'>Please enter your password</p>");
+        }
+
+        if (name !== "" && email !== "" && password !== "") {
+            alert("Form submitted successfully!");
+        }
+
+    });
+
+});
+
+    </script>
+
+</body>
+</html>

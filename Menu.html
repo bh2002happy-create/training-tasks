@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show&Hide Sections</title>
+</head>
+<style>
+     body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .page-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.page-title h1 {
+    color: #5B2DB8;
+    font-size: 32px;
+}
+
+.page-title p {
+    color: #666;
+    font-size: 18px;
+}
+
+    .expandable-sections {
+        width: 500px;
+        margin: 50px auto;
+    }
+
+    .section {
+        background-color: white;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .section h3 {
+        background-color: #5B2DB8;
+        color: white;
+        padding: 15px;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .section p {
+        padding: 15px;
+        margin: 0;
+        display: none;
+        color: #555;
+    }
+</style>
+<body>
+
+    <div class="page-title">
+    <h1>Web Development Basics</h1>
+    <p>Learn the Fundamentals of Web Development</p>
+</div>
+
+    <div class="Show&Hide Sections">
+
+        <div class="section">
+            <h3>HTML</h3>
+            <p>
+                HTML is used to structure web pages.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>CSS</h3>
+            <p>
+                CSS is used to style and design web pages.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>JavaScript</h3>
+            <p>
+                JavaScript adds interactivity to web pages.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>jQuery</h3>
+            <p>
+                jQuery makes JavaScript easier to write.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $(".section h3").click(function() {
+
+            $(".section p").slideUp();
+
+            $(this).next("p").slideDown();
+
+        });
+
+    });
+</script>
+
+</body>
+</html>

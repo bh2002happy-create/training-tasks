@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    body {
+    font-family: Arial;
+    text-align: center;
+    padding: 50px;
+}
+
+button {
+    background-color: #6C63FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width:220px;
+    height: 65px;
+}
+
+#content {
+    display: none;
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 20px;
+}
+</style>
+<body>
+
+
+    <button id="toggleBtn">Show / Hide Content</button>
+
+    <div id="content">
+        <p>Hello! This is my hidden content.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+        $("#toggleBtn").click(function() {
+
+            $("#content").toggle();
+
+        });
+
+    });
+</script>
+</body>
+</html>

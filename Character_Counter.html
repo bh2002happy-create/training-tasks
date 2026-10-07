@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live Character Counter</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f1f8;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    h1 {
+        color: #5B2DB8;
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    textarea {
+        width: 500px;
+        height: 180px;
+        padding: 15px;
+        font-size: 18px;
+        border: 2px solid #5B2DB8;
+        border-radius: 10px;
+        outline: none;
+        resize: none;
+    }
+
+    p {
+        color: #555;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    #count {
+        color: #5B2DB8;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+    <h1>Live Character Counter</h1>
+
+    <textarea id="message" maxlength="100"></textarea>
+
+    <p>
+        Characters:
+        <span id="count">0</span>
+        / 100
+    </p>
+
+    <script>
+
+        let message = document.getElementById("message");
+        let count = document.getElementById("count");
+
+        message.oninput = function() {
+
+            count.textContent = message.value.length;
+
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1f8;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .game {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #ddd;
+        }
+
+        h1 {
+            color: #5B2DB8;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        input {
+            width: 200px;
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid #5B2DB8;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #5B2DB8;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #43208c;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="game">
+
+        <h1>Guess The Number</h1>
+
+        <p>Guess a number between 1 and 10</p>
+
+        <input type="number" id="guess" min="1" max="10">
+
+        <br>
+
+        <button id="check">Check</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+        let guess = document.getElementById("guess");
+        let check = document.getElementById("check");
+        let result = document.getElementById("result");
+
+        check.onclick = function() {
+
+            let userNumber = Number(guess.value);
+
+            if (guess.value === "" || userNumber < 1 || userNumber > 10) {
+
+                result.textContent = "Please enter a number from 1 to 10";
+                result.style.color = "red";
+
+            } else if (userNumber < randomNumber) {
+
+                result.textContent = "Too Low!";
+                result.style.color = "orange";
+
+            } else if (userNumber > randomNumber) {
+
+                result.textContent = "Too High!";
+                result.style.color = "red";
+
+            } else {
+
+                result.textContent = "Correct!";
+                result.style.color = "green";
+
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

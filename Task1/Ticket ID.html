@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+        <link rel="stylesheet" href="style.css">
+<style>
+    body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.ticket {
+    width: 440px;
+    margin: 25px auto;
+    padding: 12px;
+    background-color: #303030;
+    color: #ccc;
+}
+
+.ticket h2 {
+    background-color: #595959;
+    margin: 0;
+    padding: 10px 15px 15px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.row {
+    display: flex;
+    background-color: #595959;
+    padding: 8px 15px;
+}
+
+.label {
+    width: 135px;
+    font-style: italic;
+    color: white;
+}
+
+.info {
+    color: #ccc;
+}
+
+
+.green-circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #54c878;
+    border-radius: 50%;
+}
+
+.support {
+    color: red;
+    margin-top: 3px;
+}
+
+.link {
+    color: #ddd;
+    margin-top: 12px;
+}
+
+.status {
+    color: #e67820;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+        <div class="ticket">
+
+        <h2>Ticket ID: 409788</h2>
+
+        <div class="row">
+            <div class="label">Name:</div>
+            <div class="info">
+                <span class="green-circle"></span> Parker Seidel
+                <div class="support">No Active Support</div>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="label">Email:</div>
+            <div class="info">seidel@aptmail.com</div>
+        </div>
+
+            <div class="row">
+            <div class="label">Response Time:</div>
+            <div class="info">72hours, 60hours left</div>
+        </div>
+
+              <div class="row">
+            <div class="label">Last Action:</div>
+            <div class="info">
+                Never been locked.
+                <div class="link">Link to public post</div>
+            </div>
+        </div>
+
+              <div class="row">
+            <div class="label">Status:</div>
+            <div class="info status">Not answered</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

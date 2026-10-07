@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+body {
+    margin: 0;
+
+    background-color: #ddd;
+
+    font-family: Arial, sans-serif;
+}
+
+/* الكارد */
+.login-card {
+    width: 350px;
+    height: 430px;
+
+    background-color: white;
+
+    margin: 70px auto;
+
+    padding: 30px 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* صورة Login */
+.login-card img {
+    width: 110px;
+    height: auto;
+
+    align-self: center;
+
+    margin-bottom: 25px;
+}
+
+/* Username و Password */
+.login-card label {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+/* حقول الإدخال */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    height: 35px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    margin-bottom: 12px;
+}
+
+/* Remember + Forget */
+.options {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2px;
+}
+
+.options input {
+    margin: 0 4px 0 0;
+}
+
+.options span {
+    font-size: 14px;
+}
+
+.options a {
+    color: #299fc5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+/* زر Login */
+button {
+    width: 100%;
+    height: 38px;
+
+    margin-top: 15px;
+
+    background-color: #29a9df;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-size: 16px;
+}
+
+</style>
+<body>
+
+    <div class="login-card">
+
+        <img src="images/login.png">
+
+        <label>Username</label>
+        <input type="text">
+
+        <label>Password</label>
+        <input type="password">
+
+        <div class="options">
+
+            <div>
+                <input type="checkbox">
+                <span>Remember Me</span>
+            </div>
+
+            <a href="#">Forget Password?</a>
+
+        </div>
+
+        <button>login</button>
+
+    </div>
+
+</body>
+</html>
